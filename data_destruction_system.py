@@ -36,10 +36,10 @@ def shred_with_callback(filepaths: list[str], put: callable) -> int:
     for fp in filepaths:
         if shred_file(fp):
             count += 1
-            put(("log", f"[파기] {Path(fp).name} ✅"))
+            put(("log", f"[파기] {Path(fp).name} 성공"))
             put(("log", f"[파기] {count}건이 성공적으로 파기되었습니다."))
         else:
-            put(("log", f"[파기] {Path(fp).name} ❌ 실패"))
+            put(("log", f"[파기] {Path(fp).name} 실패"))
     return count
 
 
