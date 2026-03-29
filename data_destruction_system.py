@@ -13,6 +13,3 @@ def shred_file(filepath: str) -> bool:
     records.append({"파일명": p.name, "결과": "성공"})
     LOG_FILE.write_text(json.dumps(records, ensure_ascii=False, indent=2), "utf-8")
     return True
-
-if __name__ == "__main__":
-    shred_file("/Users/danver123/Desktop/샘플 문서.docx")
